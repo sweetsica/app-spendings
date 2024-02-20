@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\History;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HistoryController extends Controller
@@ -12,7 +14,8 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        //
+        $data = History::query()->get();
+        return response()->json($data,200);
     }
 
     /**

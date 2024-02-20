@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Source;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SourceController extends Controller
@@ -12,7 +14,8 @@ class SourceController extends Controller
      */
     public function index()
     {
-        //
+        $data = Source::query()->get();
+        return response()->json($data,200);
     }
 
     /**
@@ -28,7 +31,13 @@ class SourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $source = Source::create([
+            'user_id' => $request['user_id'],
+            'name'=> $request['name'],
+            'total'=> $request['total'],
+        ]);
+        $source->save();
+        return redirect()->back();
     }
 
     /**

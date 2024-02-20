@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
+            $table->string('name')->nullable();//Tên danh mục chi tiêu
+            $table->integer('user_id')->nullable();
             $table->timestamps();
         });
     }

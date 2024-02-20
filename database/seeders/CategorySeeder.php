@@ -14,6 +14,9 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         DB::table('categories')->insert([
+            'name' => 'Khoản chi không xác định',
+        ]);
+        DB::table('categories')->insert([
             'name' => 'Chuyển tài khoản',
         ]);
         DB::table('categories')->insert([

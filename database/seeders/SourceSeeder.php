@@ -13,22 +13,19 @@ class SourceSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('users')->insert([
+        DB::table('sources')->insert([
             'user_id' => '1',
             'name' => 'Vietcombank',
-            'amount' => 10000000,
             'total'=>10000000
         ]);
-        DB::table('users')->insert([
+        DB::table('sources')->insert([
             'user_id' => '1',
             'name' => 'VPBank',
-            'amount' => 5000000,
             'total'=>5000000
         ]);
-        DB::table('users')->insert([
+        DB::table('sources')->insert([
             'user_id' => '1',
             'name' => 'TP Bank',
-            'amount' => 5000000,
             'total'=>5000000
         ]);
     }

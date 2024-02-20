@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('sources', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->nullable();
-            $table->string('name')->nullable();
-            $table->integer('amount')->default(0);
-            $table->integer('total')->default(0);
+            $table->integer('user_id')->nullable();//ID người dùng
+            $table->integer('bank_id')->default(0);
+            $table->string('name')->nullable();//Tên nguồn
+            $table->integer('total')->default(0);//Tổng số
             $table->timestamps();
         });
     }

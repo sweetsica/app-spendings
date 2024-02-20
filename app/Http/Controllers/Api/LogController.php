@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Log;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class LogController extends Controller
@@ -12,7 +14,8 @@ class LogController extends Controller
      */
     public function index()
     {
-        //
+        $data = Log::query()->get();
+        return response()->json($data,200);
     }
 
     /**
@@ -28,7 +31,9 @@ class LogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $log = Log::create($request->all());
+        $log->save();
+        return response()->json($log,200);
     }
 
     /**
