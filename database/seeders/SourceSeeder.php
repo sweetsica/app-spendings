@@ -15,18 +15,33 @@ class SourceSeeder extends Seeder
     {
         DB::table('sources')->insert([
             'user_id' => '1',
+            'bank_id' => '43',
             'name' => 'Vietcombank',
-            'total'=>10000000
+            'total'=>0
         ]);
         DB::table('sources')->insert([
             'user_id' => '1',
+            'bank_id' => '47',
             'name' => 'VPBank',
-            'total'=>5000000
+            'total'=>0
         ]);
         DB::table('sources')->insert([
             'user_id' => '1',
+            'bank_id' => '39',
             'name' => 'TP Bank',
-            'total'=>5000000
+            'total'=>0
+        ]);
+        DB::table('sources')->insert([
+            'user_id' => '1',
+            'bank_id' => '64',
+            'name' => 'MoMo',
+            'total'=>0
+        ]);
+        DB::table('sources')->insert([
+            'user_id' => '1',
+            'bank_id' => '67',
+            'name' => 'ShopeePay',
+            'total'=>0
         ]);
     }
 }

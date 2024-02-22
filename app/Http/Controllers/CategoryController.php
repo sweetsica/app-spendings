@@ -12,8 +12,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::where('id','=',session('user_id'))->get();
-        return view('front-end.source.index',compact('data'));
+        $data['categories'] = Category::where('user_id','=',session('user_id'))->orWhereNull('user_id')->get();
+        return view('front-end.category.index',compact('data'));
     }
 
     /**
@@ -29,7 +29,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = $request->user_id ? $request->user_id : null;
+        $source = Category::create([
+            'name'=> $request['name'],
+            'user_id' => $user_id
+        ]);
+        $source->save();
+//        return redirect()->back();
+        return redirect()->back()->with(['success'=>'Thêm mới thành công!']);
     }
 
     /**

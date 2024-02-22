@@ -91,8 +91,8 @@
                                 <tbody>
                                 @foreach($data['categories'] as $category)
                                     <tr>
-                                        <th>{{$transaction->id}}</th>
-                                        <th>{{$transaction->name}}</th>
+                                        <th>{{$category->id}}</th>
+                                        <th>{{$category->name}}</th>
                                     </tr><!--end tr-->
                                 @endforeach
                                 </tbody>
@@ -116,7 +116,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <form method="POST" action="{{route('api.category.store')}}" class="form-horizontal well" role="form">
+                            <form method="POST" action="{{route('category.store')}}" class="form-horizontal well" role="form">
                                 @csrf
                                 <input type="hidden" name="user_id" value="{{session('user_id')}}">
                                 <div class="form-group row">

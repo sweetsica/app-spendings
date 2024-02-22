@@ -23,7 +23,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i class="mdi mdi-account-outline font-16"></i></span>
                                     </div>
-                                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Enter username">
                                 </div>
                             </div>
 
@@ -33,7 +33,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon2"><i class="mdi mdi-key font-16"></i></span>
                                     </div>
-                                    <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
+                                    <input name="password" type="password" class="form-control" id="userpassword" placeholder="Enter password">
                                 </div>
                             </div>
 

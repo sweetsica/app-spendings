@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bank;
 use App\Models\Source;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class SourceController extends Controller
      */
     public function index()
     {
-        $data = Source::query()->get();
+        $data = Source::all();
         return response()->json($data,200);
     }
 
@@ -31,13 +32,18 @@ class SourceController extends Controller
      */
     public function store(Request $request)
     {
+        if($request['name_custom']){
+            $name_source = $request['name_custom'];
+        }else{
+            $name_source = Bank::find($request['bank_id'])->name;
+        }
         $source = Source::create([
             'user_id' => $request['user_id'],
-            'name'=> $request['name'],
+            'name'=> $name_source,
             'total'=> $request['total'],
         ]);
         $source->save();
-        return redirect()->back();
+        return response()->json($source,200);
     }
 
     /**

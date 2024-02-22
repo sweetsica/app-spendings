@@ -15,7 +15,7 @@ class SourceController extends Controller
      */
     public function index()
     {
-        $data['sources'] = Source::where('id','=',session('user_id'))->get();
+        $data['sources'] = Source::where('user_id','=',session('user_id'))->get();
         $data['banks'] = Bank::all();
         return view('front-end.source.index',compact('data'));
     }
@@ -33,7 +33,18 @@ class SourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request['name_custom']){
+            $name_source = $request['name_custom'];
+        }else{
+            $name_source = Bank::find($request['bank_id'])->shortName;
+        }
+        $source = Source::create([
+            'user_id' => $request['user_id'],
+            'name'=> $name_source,
+            'total'=> $request['total'],
+        ]);
+        $source->save();
+        return redirect()->back();
     }
 
     /**

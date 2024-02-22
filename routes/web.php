@@ -25,10 +25,11 @@ use App\Http\Controllers\HistoryController;
 Route::get('/',[UserController::class,'index'])->name('home');
 Route::get('/login',function (){
     return view('login');
-});
+})->name('login');
 Route::post('/login',[UserController::class,'logInCheck'])->name('login.check');
 Route::get('/logout',[UserController::class,'logOut'])->name('logout');
 
 Route::get('/source',[SourceController::class,'index'])->name('source.index');
 Route::get('/category',[CategoryController::class,'index'])->name('category.index');
 Route::get('/history',[HistoryController::class,'index'])->name('history.index');
+

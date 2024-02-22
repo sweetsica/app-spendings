@@ -31,28 +31,29 @@ class UserController extends Controller
 
     public function logInCheck(Request $request)
     {
-        $user = User::findOrFail($request->username);
+//        dd($request);
+        $user = User::where('name','=',$request->name)->first();
         if($user){
-            $user['password'] = Hash::make($request->password);
+            $user['password'] = Hash::check($user->password,$request->password);
             if($user['password']){
                 Session::put('user_name',$user['name']);
                 Session::put('user_id',$user['id']);
                 if($user['name']=='sweetsica'){
                     Session::put('user_role','admin');
                 }
-                return Redirect::back()->with(['message' => 'Đăng nhập thành công!']);
+                return redirect()->route('home')->with(['message' => 'Đăng nhập thành công!']);
             }else{
-                return Redirect::back()->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
+                return redirect()->route('home')->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
             }
         }else{
-            return Redirect::back()->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
+            return redirect()->route('home')->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
         }
     }
 
     public function logOut()
     {
         Session::flush();
-        return Redirect::back();
+        return redirect()->route('login')->with(['message' => 'Đăng xuất thành công!']);
     }
 
     /**

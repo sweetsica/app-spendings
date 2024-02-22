@@ -79,13 +79,14 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body new-user order-list">
-                        <h4 class="header-title mt-0 mb-3">Danh mục chi tiêu:</h4>
+                        <h4 class="header-title mt-0 mb-3">Danh sách nguồn tiền:</h4>
                         <div class="table-responsive">
                             <table id="footable-1" class="table footable footable-1 breakpoint-lg" data-sorting="true" style="">
                                 <thead class="thead-light">
                                 <tr>
                                     <th data-name="id" data-breakpoints="xs" data-type="number" class="border-top-0">#</th>
                                     <th data-name="source" class="border-top-0">Tên</th>
+                                    <th data-name="source" class="border-top-0">Số dư</th>
                                 </tr><!--end tr-->
                                 </thead>
                                 <tbody>
@@ -93,6 +94,7 @@
                                     <tr>
                                         <th>{{$source->id}}</th>
                                         <th>{{$source->name}}</th>
+                                        <th class="currency">{{$source->total}}</th>
                                     </tr><!--end tr-->
                                 @endforeach
                                 </tbody>
@@ -116,12 +118,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <form method="POST" action="{{route('api.category.store')}}" class="form-horizontal well" role="form">
+                            <form method="POST" action="{{route('source.store')}}" class="form-horizontal well" role="form">
                                 @csrf
                                 <input type="hidden" name="user_id" value="{{session('user_id')}}">
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-4 col-form-label text-right">Tên danh mục:</label>
-                                    <input class="col-sm-8" type="text" name="name">
+                                    <input class="col-sm-8" type="text" name="name_custom">
                                 </div>
                                 <div class="form-group row">
                                     <label for="bank_id" class="col-sm-4 col-form-label text-right">Chọn ngân hàng/ví điện tử:</label>
