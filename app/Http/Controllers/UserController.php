@@ -19,7 +19,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        Session::put(['user_id'=>1]);
         $data['sources'] = Source::where('user_id','=',session('user_id'))->get();
 //        $data['categories'] = Category::where('user_id','=',session('user_id'))->orWhere('user_id','=',null);
         $data['categories'] = Category::where('user_id', session('user_id'))->orWhereNull('user_id')->get();
