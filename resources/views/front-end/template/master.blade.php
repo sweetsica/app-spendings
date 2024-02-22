@@ -5,10 +5,10 @@
         @yield('meta')
     @else
         <meta charset="utf-8" />
-        <title>Frogetor - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>App Spending Sweetsica ♥</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A premium admin dashboard template by mannatthemes" name="description" />
-        <meta content="Mannatthemes" name="author" />
+        <meta content="An app to tracking spending" name="description" />
+        <meta content="Sweetsica" name="author" />
 
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -160,7 +160,7 @@
                             <a href="#" class=""><i class="mdi mdi-settings text-light"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class=""><i class="mdi mdi-power text-danger"></i></a>
+                            <a href="{{route('logout')}}" class=""><i class="mdi mdi-power text-danger"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -178,7 +178,7 @@
                             <h4 class="page-title mb-2"><i class="mdi mdi-view-dashboard-outline mr-2"></i>Dashboard</h4>
                             <div class="">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Frogetor</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Spending</a></li>
                                     <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
                                     <li class="breadcrumb-item active">Dashboard-2</li>
                                 </ol>
@@ -216,9 +216,6 @@
             <!-- end left-sidenav-->
         @endif
         <!-- Page Content-->
-            @if (Session::has('message'))
-                <div class="alert alert-info">{{ Session::get('message') }}</div>
-            @endif
             <div class="page-content">
 {{--                section-content--}}
                 @hasSection('content')

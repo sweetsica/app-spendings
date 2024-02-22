@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Dashboard-2 Js
  */
@@ -30,7 +30,7 @@ $('#user_usa').vectorMap({
     }]
   },
 });
- 
+
 
 // d2_overview
 
@@ -67,7 +67,7 @@ $('#user_usa').vectorMap({
 
     xaxis: {
         type: 'month',
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],                
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
     },
     tooltip: {
         x: {
@@ -199,7 +199,7 @@ var options = {
     title: {
         text: ''
     },
-    
+
     labels: {
       formatter: function(val) {
         return Math.abs(Math.round(val)) + "%"

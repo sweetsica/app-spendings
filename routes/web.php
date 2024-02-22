@@ -31,7 +31,7 @@ Route::get('/dashboard',[UserController::class,'index'])->name('home');
 Route::post('/login',[UserController::class,'logInCheck'])->name('login.check');
 Route::get('/logout',[UserController::class,'logOut'])->name('logout');
 
-Route::get('/source',[SourceController::class,'index'])->name('source.index');
-Route::get('/category',[CategoryController::class,'index'])->name('category.index');
-Route::get('/history',[HistoryController::class,'index'])->name('history.index');
+Route::resource('/source',SourceController::class);
+Route::resource('/category',CategoryController::class);
+Route::resource('/history',HistoryController::class);
 

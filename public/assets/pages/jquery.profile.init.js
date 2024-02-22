@@ -1,12 +1,12 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Profile Js
  */
 
 
 //Doughnut
-      
+
 var ctx = document.getElementById("pro-doughnut").getContext('2d');
 
 gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
@@ -48,9 +48,9 @@ gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
           labels: {
             boxWidth:12
           }
-      },          
+      },
     }
-  }); 
+  });
 
 // bar
 $('.peity-bar').each(function () {
@@ -99,7 +99,7 @@ var options = {
 
   xaxis: {
       type: 'month',
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],                
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',],
   },
   tooltip: {
       x: {
@@ -123,7 +123,7 @@ var options = {
   chart: {
       height: 250,
       type: 'donut',
-  }, 
+  },
   series: [10, 65, 25,],
   legend: {
       show: true,
@@ -148,7 +148,7 @@ var options = {
           },
       }
   }],
-  
+
 }
 
 var chart = new ApexCharts(

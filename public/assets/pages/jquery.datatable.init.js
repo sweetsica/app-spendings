@@ -1,15 +1,15 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Datatables Js
  */
 
- 
+
 $(document).ready(function() {
   $('#datatable').DataTable();
 
   $(document).ready(function() {
-      $('#datatable2').DataTable();  
+      $('#datatable2').DataTable();
   } );
 
   //Buttons examples

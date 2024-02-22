@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Footable Js
  */
@@ -7,10 +7,10 @@
 
 $(function () {
 	"use strict";
-	
+
 	/*Init FooTable*/
 	$('#footable-1,#footable-2').footable();
-	
+
 	/*Editing FooTable*/
 	var $modal = $('#editor-modal'),
 	$editor = $('#editor'),

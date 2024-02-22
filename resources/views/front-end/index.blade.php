@@ -8,25 +8,45 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title-box">
-                <div class="float-right align-item-center mt-2">
-                    <a style="color: white" href="#custom-modal-in" data-animation="blur" data-plugin="custommodal" data-overlayColor="#38414a">
-                        <button class="btn px-4 align-self-center report-btn btn-success">
-                           Nạp
-                        </button>
-                    </a>
-                    <a style="color: white" href="#custom-modal-out" data-animation="blur" data-plugin="custommodal" data-overlayColor="#38414a">
-                        <button class="btn px-4 align-self-center report-btn btn-danger">
-                            Rút
-                        </button>
-                    </a>
+                <div class="row col-sm-12" style="position: absolute; z-index: 1;display: block; width: 50%;padding-left:5px">
+                    @if (Session::has('alert'))
+                        <div class="d-flex justify-content-between alert alert-mess {!! Session::get('alert')!!}" role="alert">
+                            <div class="d-flex">
+                                <i class="mdi mdi-check-all alert-icon"></i>
+                                <div class="alert-text">
+                                    <strong>{{ Session::get('message') }}</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-content-center">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    @endif
+
                 </div>
-                <h4 class="page-title mb-2"><i class="mdi mdi-table mr-2"></i>Footable</h4>
-                <div class="">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Frogetor</a></li>
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
-                        <li class="breadcrumb-item active">Footable</li>
-                    </ol>
+                <div style="position: relative; z-index: 0">
+                    <div class="float-right align-item-center mt-2">
+                        <a style="color: white" href="#custom-modal-in" data-animation="blur" data-plugin="custommodal" data-overlayColor="#38414a">
+                            <button class="btn px-4 align-self-center report-btn btn-success">
+                               Nạp
+                            </button>
+                        </a>
+                        <a style="color: white" href="#custom-modal-out" data-animation="blur" data-plugin="custommodal" data-overlayColor="#38414a">
+                            <button class="btn px-4 align-self-center report-btn btn-danger">
+                                Rút
+                            </button>
+                        </a>
+                    </div>
+                    <h4 class="page-title mb-2"><i class="mdi mdi-table mr-2"></i>Footable</h4>
+                    <div class="">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Spending</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
+                            <li class="breadcrumb-item active">Footable</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div><!--end col-->
@@ -121,7 +141,6 @@
                         <div class="table-responsive">
 {{--                            <table id="datatable" class="table table-bordered">--}}
                             <table id="footable-1" class="table footable footable-1 breakpoint-lg" data-sorting="true" style="">
-
                                 <thead class="thead-light">
                                 <tr>
                                     <th data-name="id" data-breakpoints="xs" data-type="number" class="border-top-0">#</th>
@@ -263,6 +282,8 @@
 
 
 @section('js')
+
+
     <script src="{{asset('assets/js/style.js')}}"></script>
     <!-- jQuery  -->
     <script src="{{asset('assets/js/jquery.min.js')}}"></script>
@@ -281,4 +302,13 @@
 
     <!-- App js -->
     <script src="{{asset('assets/js/app.js')}}"></script>
+
+    <script>
+        $("document").ready(function(){
+            setTimeout(function(){
+                $("div.alert-mess").remove();
+            }, 3000 );
+
+        });
+    </script>
 @endsection

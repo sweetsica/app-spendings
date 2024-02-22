@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Chart Js
  */
@@ -198,7 +198,7 @@
                     }
                 ]
             }
-            
+
         };
         this.respChart($("#bar"),'Bar',barChart, barOpts);
 

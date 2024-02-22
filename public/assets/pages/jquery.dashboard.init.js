@@ -1,12 +1,12 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: MannatThemes
  * Module/App: App.js
  */
 
 
 var dash_spark_1 = {
-    
+
     chart: {
         type: 'area',
         height: 80,
@@ -33,11 +33,11 @@ var dash_spark_1 = {
 
 
  //dash-colunm-1
-  
+
  var options = {
 
 
-    
+
     chart: {
         height:80,
         animations: {
@@ -50,8 +50,8 @@ var dash_spark_1 = {
     },
     plotOptions: {
         bar: {
-            horizontal: false, 
-            endingShape: "rounded", 
+            horizontal: false,
+            endingShape: "rounded",
             columnWidth: "40%"
         }
     },
@@ -59,13 +59,13 @@ var dash_spark_1 = {
         enabled: false
     },
     stroke: {
-        show: true, 
-        width: 2, 
+        show: true,
+        width: 2,
         colors: ["transparent"]
     },
     colors: ["#1ecab8"],
     series:[ {
-        name: "Revenue", 
+        name: "Revenue",
         data: [50, 60, 70, 80, 90, 100, 95, 85, 75, 65, 55, 65, 75, 85, 95, 105, 80, 70, 60, 50, 40, 30, 45, 55, 65, 75, 85, 95, 100, 80, 60]
     }
     ],
@@ -78,7 +78,7 @@ var dash_spark_1 = {
     fill: {
         opacity: 0.5
     },
-    
+
     tooltip: {
         y: {
             formatter:function(val) {
@@ -97,13 +97,13 @@ var chart = new ApexCharts(
 
 
   //dash-radialBar
-  
+
 var options = {
     chart: {
         height: 180,
         type: "radialBar",
       },
-    
+
       series: [67],
       colors: ["#20E647"],
       plotOptions: {
@@ -151,13 +151,13 @@ var options = {
       },
       labels: ["Progress"]
     };
-    
+
     var chart = new ApexCharts(document.querySelector("#d1-radialBarMap"), options);
-    
+
     chart.render();
 
 
-    
+
 //Dash-Map
 
 $('#world-map-markers').vectorMap({
@@ -225,7 +225,7 @@ var options = {
   chart: {
       height: 250,
       type: 'donut',
-  }, 
+  },
   series: [10, 65, 25,],
   legend: {
       show: true,
@@ -250,7 +250,7 @@ var options = {
           },
       }
   }],
-  
+
 }
 
 var chart = new ApexCharts(

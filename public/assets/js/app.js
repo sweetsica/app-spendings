@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Module/App: Main Js
  */
@@ -25,7 +25,7 @@
         $("#side-nav").metisMenu();
     }
 
-    
+
 
     function initLeftMenuCollapse() {
         // Left menu collapse
@@ -49,7 +49,7 @@
         // === following js will activate the menu in left side bar based on url ====
         $(".left-sidenav a").each(function () {
             var pageUrl = window.location.href.split(/[?#]/)[0];
-            if (this.href == pageUrl) { 
+            if (this.href == pageUrl) {
                 $(this).addClass("active");
                 $(this).parent().addClass("active"); // add active to li of the current link
                 $(this).parent().parent().addClass("in");
@@ -61,9 +61,9 @@
         });
     }
 
-   
 
-   
+
+
 
     function init() {
         initSlimscroll();

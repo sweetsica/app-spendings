@@ -31,28 +31,36 @@ class UserController extends Controller
     public function logInCheck(Request $request)
     {
 //        dd($request);
-        $user = User::where('name','=',$request->name)->first();
+        $user = User::where('username','=',$request['username'])->first();
         if($user){
-            $user['password'] = Hash::check($user->password,$request->password);
+            $user['password'] = Hash::check($request->password,$user->password);
             if($user['password']){
-                Session::put('user_name',$user['name']);
+                Session::put('user_name',$user['username']);
                 Session::put('user_id',$user['id']);
-                if($user['name']=='sweetsica'){
+                if($user['username']=='sweetsica'){
                     Session::put('user_role','admin');
                 }
-                return redirect()->route('home')->with(['message' => 'Đăng nhập thành công!']);
+                Session::flash('alert','alert-success border-0');
+                Session::flash('message','Đăng nhập thành công!');
+                return redirect()->route('home');
             }else{
-                return redirect()->route('home')->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
+                Session::flash('alert','alert-danger border-0');
+                Session::flash('message','Sai tài khoản hoặc mật khẩu!');
+                return redirect()->route('login');
             }
         }else{
-            return redirect()->route('home')->with(['message' => 'Sai tài khoản hoặc mật khẩu!']);
+            Session::flash('alert','alert-danger border-0');
+            Session::flash('message','Sai tài khoản hoặc mật khẩu!');
+            return redirect()->route('login');
         }
     }
 
     public function logOut()
     {
         Session::flush();
-        return redirect()->route('login')->with(['message' => 'Đăng xuất thành công!']);
+        Session::flash('alert','alert-success border-0');
+        Session::flash('message','Đăng xuất thành công!');
+        return redirect()->route('login');
     }
 
     /**

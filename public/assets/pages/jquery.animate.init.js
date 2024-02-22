@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Animate Js
  */
@@ -10,7 +10,7 @@ function testAnim(x) {
     });
   };
 
-  
+
 
   $(document).ready(function(){
     $('.js--triggerAnimation').click(function(e){

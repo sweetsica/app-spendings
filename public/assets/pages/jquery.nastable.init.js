@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Nastable Js
  */
 
 
- 
+
 !function($) {
   "use strict";
 
@@ -53,7 +53,7 @@
   $.Nestable = new Nestable, $.Nestable.Constructor = Nestable
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
   "use strict";
   $.Nestable.init()

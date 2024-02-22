@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Fancybox Js
  */
@@ -7,7 +7,7 @@
 $('.fancybox').fancybox();
 
 $('[data-fancybox="images"]').fancybox({
-    buttons : [ 
+    buttons : [
       'slideShow',
       'share',
       'zoom',

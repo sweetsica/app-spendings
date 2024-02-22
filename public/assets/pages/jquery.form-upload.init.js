@@ -1,12 +1,12 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Upload Js
  */
 
 
  // dropify js
- 
+
 $(function () {
   // Basic
   $('.dropify').dropify();

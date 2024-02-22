@@ -18,7 +18,7 @@
                 <h4 class="page-title mb-2"><i class="mdi mdi-table mr-2"></i>Footable</h4>
                 <div class="">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0);">Frogetor</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Spending</a></li>
                         <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
                         <li class="breadcrumb-item active">Footable</li>
                     </ol>

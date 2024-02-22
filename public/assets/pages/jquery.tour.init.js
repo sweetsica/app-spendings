@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Tour Js
  */
@@ -41,4 +41,3 @@
   productTour.startTour();//initialize the tour
 })();
 
-  

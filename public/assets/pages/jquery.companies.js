@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Auto Complete
  */
 
 $( document ).ready(function() {
-    
+
     var DrawSparkline = function() {
         $('#company-1').sparkline([0, 23, 43, 35, 44, 45, 56, 37, 40], {
             type: 'line',
@@ -128,9 +128,9 @@ $( document ).ready(function() {
         });
     }
 
-    
+
     DrawSparkline();
-    
+
     var resizeChart;
 
     $(window).resize(function(e) {

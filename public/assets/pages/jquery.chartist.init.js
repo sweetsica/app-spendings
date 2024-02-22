@@ -1,10 +1,10 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * chartist Js
  */
 
- 
+
 //smil-animations Chart
 
 

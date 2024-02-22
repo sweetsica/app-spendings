@@ -1,10 +1,10 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Gmaps Js
  */
 
- 
+
 !function($) {
   "use strict";
 
@@ -151,7 +151,7 @@
   $.GoogleMap = new GoogleMap, $.GoogleMap.Constructor = GoogleMap
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
   "use strict";
   $.GoogleMap.init()

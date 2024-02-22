@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\History;
+use App\Models\Log;
 use Illuminate\Http\Request;
 
 class HistoryController extends Controller
@@ -12,9 +13,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        $data = History::where('user_id','=',session('user_id'));
+        $data['user'] = Log::where('user_id','=',session('user_id'))->get();
         if (session('user_role')=='admin'){
-            $data['users'] = History::all();
+            $data['users'] = Log::all();
         }
         return view('front-end.history.index',compact('data'));
     }

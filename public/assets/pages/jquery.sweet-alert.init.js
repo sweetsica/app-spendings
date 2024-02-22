@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Sweet Alert Js
  */
 
 
- 
+
 !function ($) {
     "use strict";
 
@@ -81,7 +81,7 @@
                 customClass: 'animated tada'
               })
         });
-        
+
         //Parameter
         $('#sa-params').click(function () {
             swal({
@@ -116,7 +116,7 @@
         //Custom Image
         $('#sa-image').click(function () {
             swal({
-                title: 'Frogetor Brand',
+                title: 'Spending Brand',
                 text: 'Modal with a custom image.',
                 imageUrl: 'assets/images/logo-sm.png',
                 imageHeight: 80,

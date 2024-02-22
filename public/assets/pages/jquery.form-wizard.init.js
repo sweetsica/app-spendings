@@ -1,22 +1,22 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Form Wizard Js
  */
 
-  
+
 $(document).ready(function(){
 
-           
+
 
   // Toolbar extra buttons
   var btnFinish = $('<button></button>').text('Finish')
       .addClass('btn btn-info')
-      .on('click', function(){ alert('Finish Clicked'); 
+      .on('click', function(){ alert('Finish Clicked');
   });
   var btnCancel = $('<button></button>').text('Cancel')
       .addClass('btn btn-dark')
-      .on('click', function(){ $('#smart_wizard').smartWizard("reset"); 
+      .on('click', function(){ $('#smart_wizard').smartWizard("reset");
   });
 
   $('#smart_wizard').smartWizard({
@@ -40,7 +40,7 @@ $(document).ready(function(){
           toolbarExtraButtons: [btnFinish, btnCancel]
       }
   });
-  
+
 
    // Smart Wizard Circle
    $('#smart_wizard_circles').smartWizard({

@@ -1,10 +1,10 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Jvectormap Js
  */
 
- 
+
 !function($) {
   "use strict";
 
@@ -96,7 +96,7 @@
   $.VectorMap = new VectorMap, $.VectorMap.Constructor = VectorMap
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
   "use strict";
   $.VectorMap.init()

@@ -1,5 +1,5 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Tooltip Js
  */
@@ -8,7 +8,7 @@
 
     "use strict";
 
-    tippy('.tippy-btn');       
+    tippy('.tippy-btn');
     tippy('#myElement', {
         html: document.querySelector('#feature__html'), // DIRECT ELEMENT option
         arrow: true,

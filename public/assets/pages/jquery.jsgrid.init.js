@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Jsgrid Js
  */
 
 
- 
+
 $(function() {
 
   $("#jsGrid").jsGrid({

@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Apexcharts Js
  */
 
 
-   
+
 var options = {
     chart: {
       height: 374,
@@ -90,16 +90,16 @@ var options = {
       }
     }]
   }
-  
+
   var chart = new ApexCharts(
     document.querySelector("#apex_line1"),
     options
   );
-  
+
   chart.render();
 
     //line-2
-    
+
 var options = {
     chart: {
       height: 380,
@@ -177,16 +177,16 @@ var options = {
       }
     }]
   }
-  
+
   var chart = new ApexCharts(
     document.querySelector("#apex_line2"),
     options
   );
-  
+
   chart.render();
 
     // line-3
-  
+
 var ts2 = 1484418600000;
 var dates = [];
 var spikes = [5, -5, 3, -3, 8, -8]
@@ -410,7 +410,7 @@ for(var i=0; i<12; i++) {
       document.querySelector("#apex_area1"),
       options
   );
-  
+
   chart.render();
 
   //Area-2
@@ -727,7 +727,7 @@ for(var i=0; i<12; i++) {
         [1361833200000,38.59],
         [1361919600000,39.60],
         ]
-        
+
       },
 
     ],
@@ -827,11 +827,11 @@ for(var i=0; i<12; i++) {
   document.querySelector("#ytd").addEventListener('click', function () {
 
   })
-  
+
   //  Column Charts
 
   //colunm-1
-  
+
 var options = {
     chart: {
         height: 396,
@@ -1086,7 +1086,7 @@ var options = {
         bar: {
             horizontal: true,
             barHeight: '80%',
-            
+
         },
     },
     dataLabels: {
@@ -1838,11 +1838,11 @@ var options = {
   series: [{
       data: seriesData
   }],
-  	
+
 stroke: {
   show: true,
   colors: '#f1f3fa',
-  width: [1,4]    
+  width: [1,4]
 },
   xaxis: {
       type: 'datetime'
@@ -1949,9 +1949,9 @@ var options = {
                       color: '#08aeb0'
                   }
               ],
-             
+
           },
-      }        
+      }
   },
   series: [{
       name: 'volume',
@@ -1986,12 +1986,12 @@ chart.render();
 
   //apex-pie1
 
-  
+
 var options = {
   chart: {
       height: 320,
       type: 'pie',
-  }, 
+  },
   series: [44, 55, 41, 17, 15],
   labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
   colors: ["#a3cae0", "#232f5b","#f06a6c", "#f1e299", "#08aeb0"],
@@ -2032,7 +2032,7 @@ var options = {
   chart: {
       height: 320,
       type: 'donut',
-  }, 
+  },
   series: [44, 55, 41, 17, 15],
   legend: {
       show: true,
@@ -2102,7 +2102,7 @@ chart.render();
       opacity: 1,
       pattern: {
         enabled: true,
-        style: ['verticalLines', 'squares', 'horizontalLines', 'circles','slantedLines'], 
+        style: ['verticalLines', 'squares', 'horizontalLines', 'circles','slantedLines'],
       },
     },
     states: {
@@ -2256,7 +2256,7 @@ var options = {
   },
   series: [44, 55, 67, 83],
   labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-  
+
 }
 
 var chart = new ApexCharts(
@@ -2481,7 +2481,7 @@ var spark1 = {
       opacity: 0.2,
   },
   series: [{
-      name: 'Frogetor Sales ',
+      name: 'Spending Sales ',
       data: randomizeArray(sparklineData)
   }],
   yaxis: {
@@ -2521,7 +2521,7 @@ var spark2 = {
       opacity: 0.2,
   },
   series: [{
-      name: 'Frogetor Expenses ',
+      name: 'Spending Expenses ',
       data: randomizeArray(sparklineData)
   }],
   yaxis: {

@@ -1,5 +1,5 @@
 /**
-* Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+* Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
 * Author: Mannatthemes
 * Component: Full-Calendar
 */
@@ -51,14 +51,14 @@ $(document).ready(function() {
             center: 'agendaDay,agendaWeek,month',
             right: 'prev,next today'
         },
-       
+
         editable: true,
         firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
         selectable: true,
         defaultView: 'month',
 
         axisFormat: 'h:mm',
-        
+
         views: {
             agenda: {
                 columnFormat: {

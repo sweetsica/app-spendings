@@ -1,11 +1,11 @@
 /**
- * Theme: Frogetor - Responsive Bootstrap 4 Admin Dashboard
+ * Theme: Spending - Responsive Bootstrap 4 Admin Dashboard
  * Author: Mannatthemes
  * Morris Chart Js
  */
 
 
- 
+
 !function($) {
   "use strict";
 
@@ -66,7 +66,7 @@
           colors: colors
       });
   },
-  
+
   MorrisCharts.prototype.init = function() {
 
       //create line chart
@@ -119,7 +119,7 @@
   $.MorrisCharts = new MorrisCharts, $.MorrisCharts.Constructor = MorrisCharts
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
   "use strict";
   $.MorrisCharts.init();
