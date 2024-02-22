@@ -17,7 +17,11 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
-
+@php
+    if(\Illuminate\Support\Facades\Session::get('user_id') == ''){
+        \Illuminate\Support\Facades\Redirect::route('login');
+    }
+@endphp
 <body class="account-body">
     @yield('content')
 

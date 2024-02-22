@@ -22,10 +22,12 @@ use App\Http\Controllers\HistoryController;
 //    return view('welcome');
 //});
 
-Route::get('/',[UserController::class,'index'])->name('home');
-Route::get('/login',function (){
+Route::get('/',function (){
     return view('login');
 })->name('login');
+
+Route::get('/dashboard',[UserController::class,'index'])->name('home');
+
 Route::post('/login',[UserController::class,'logInCheck'])->name('login.check');
 Route::get('/logout',[UserController::class,'logOut'])->name('logout');
 

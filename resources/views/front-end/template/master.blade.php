@@ -28,7 +28,11 @@
         @yield('css')
     @endif
 </head>
-
+@php
+    if(\Illuminate\Support\Facades\Session::get('user_id') == ''){
+        \Illuminate\Support\Facades\Redirect::route('login');
+    }
+@endphp
 <body>
 
 <!-- Top Bar Start -->
