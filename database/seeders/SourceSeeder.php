@@ -17,19 +17,19 @@ class SourceSeeder extends Seeder
             'user_id' => '1',
             'bank_id' => '43',
             'name' => 'Vietcombank',
-            'total'=>0
+            'total'=>4464882
         ]);
         DB::table('sources')->insert([
             'user_id' => '1',
             'bank_id' => '47',
             'name' => 'VPBank',
-            'total'=>0
+            'total'=>3910881
         ]);
         DB::table('sources')->insert([
             'user_id' => '1',
             'bank_id' => '39',
             'name' => 'TP Bank',
-            'total'=>0
+            'total'=>61361
         ]);
         DB::table('sources')->insert([
             'user_id' => '1',
